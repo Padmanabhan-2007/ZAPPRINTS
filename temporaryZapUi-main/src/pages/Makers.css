@@ -1,0 +1,828 @@
+/* ==========================================================================
+   MAKERS PAGE — AVANT-GARDE EDITORIAL / DARK OBSIDIAN DIRECTION
+   ========================================================================== */
+
+.makers-noir-page {
+  min-height: 100vh;
+  background-color: #0c0b0e;
+  color: #f7f4ed;
+  position: relative;
+  overflow-x: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  padding-top: calc(var(--navbar-clearance, 90px) + 2rem);
+  padding-bottom: 7rem;
+  selection-background-color: #ff451a;
+  selection-color: #ffffff;
+}
+
+.makers-noir-page ::selection {
+  background: #ff451a;
+  color: #ffffff;
+}
+
+/* Subtle architectural grid pattern overlay */
+.makers-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(to right, rgba(247, 244, 237, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(247, 244, 237, 0.03) 1px, transparent 1px);
+  background-size: 64px 64px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Ambient kinetic laser glow */
+.makers-laser-glow {
+  position: absolute;
+  top: 5%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90vw;
+  max-width: 1200px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(255, 69, 26, 0.07) 0%, rgba(255, 69, 26, 0) 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.makers-noir-container {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Top Meta Bar / Technical Ticker
+   -------------------------------------------------------------------------- */
+.makers-meta-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgba(247, 244, 237, 0.12);
+  padding-bottom: 1rem;
+  margin-bottom: 3.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.725rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #8c887f;
+}
+
+.makers-meta-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.makers-meta-tag {
+  color: #ff451a;
+  font-weight: 700;
+}
+
+.makers-meta-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ff451a;
+  box-shadow: 0 0 10px #ff451a;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Section — Monumental Typography
+   -------------------------------------------------------------------------- */
+.makers-editorial-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-bottom: 5rem;
+}
+
+.makers-hero-row-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.makers-hero-title-massive {
+  font-size: clamp(3.5rem, 11vw, 8.5rem);
+  font-weight: 900;
+  line-height: 0.88;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  color: #f7f4ed;
+  margin: 0;
+}
+
+.makers-hero-title-massive .accent-char {
+  color: #ff451a;
+}
+
+.makers-hero-aside {
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 0.5rem;
+}
+
+.makers-hero-aside-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.15em;
+  color: #ff451a;
+  text-transform: uppercase;
+}
+
+.makers-hero-aside-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #a8a49c;
+  margin: 0;
+}
+
+/* --------------------------------------------------------------------------
+   Parents Dedication — Intimate Editorial Vignette
+   -------------------------------------------------------------------------- */
+.makers-dedication-vignette {
+  margin-bottom: 6rem;
+  background: #131216;
+  border: 1px solid rgba(247, 244, 237, 0.1);
+  border-left: 3px solid #ff451a;
+  border-radius: 12px;
+  padding: 2.5rem 3rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
+}
+
+.makers-dedication-vignette:hover {
+  border-color: rgba(255, 69, 26, 0.3);
+  border-left-color: #ff451a;
+}
+
+.makers-dedication-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #ff451a;
+  margin-bottom: 1.25rem;
+}
+
+.makers-dedication-heading {
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #f7f4ed;
+  margin: 0 0 1rem 0;
+}
+
+.makers-dedication-body {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: #c9c5bc;
+  max-width: 780px;
+  margin: 0;
+  font-style: italic;
+}
+
+.makers-dedication-body .highlight-line {
+  color: #f7f4ed;
+  font-style: normal;
+  font-weight: 600;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   Lunar Gratitude — Subtle Moon / Night-Sky Themed Personal Card
+   -------------------------------------------------------------------------- */
+.makers-lunar-vignette {
+  margin-bottom: 6rem;
+  background: linear-gradient(135deg, #0f0e17 0%, #151324 100%);
+  border: 1px solid rgba(165, 180, 252, 0.18);
+  border-left: 3px solid #818cf8;
+  border-radius: 12px;
+  padding: 2.5rem 3rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 30px -6px rgba(99, 102, 241, 0.12);
+  transition: all 0.3s ease;
+}
+
+.makers-lunar-vignette:hover {
+  border-color: rgba(165, 180, 252, 0.4);
+  border-left-color: #a5b4fc;
+  box-shadow: 0 12px 36px -6px rgba(99, 102, 241, 0.22);
+}
+
+.makers-lunar-bg-glow {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 260px;
+  height: 260px;
+  background: radial-gradient(circle, rgba(129, 140, 248, 0.14) 0%, rgba(99, 102, 241, 0) 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  filter: blur(40px);
+}
+
+.makers-lunar-kicker {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #a5b4fc;
+  margin-bottom: 1.25rem;
+}
+
+.makers-lunar-moon-icon {
+  font-size: 0.85rem;
+  filter: drop-shadow(0 0 6px rgba(165, 180, 252, 0.6));
+}
+
+.makers-lunar-heading {
+  font-size: clamp(1.4rem, 3vw, 2.1rem);
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #f1f5f9;
+  margin: 0 0 1rem 0;
+}
+
+.makers-lunar-body {
+  font-size: 1.075rem;
+  line-height: 1.7;
+  color: #cbd5e1;
+  max-width: 820px;
+  margin: 0;
+  font-style: italic;
+}
+
+.makers-lunar-quote-highlight {
+  color: #e0e7ff;
+  font-style: normal;
+  font-weight: 600;
+  display: block;
+  margin-top: 0.5rem;
+  text-shadow: 0 0 12px rgba(165, 180, 252, 0.25);
+}
+
+/* --------------------------------------------------------------------------
+   Team Section — Continuous Editorial Layouts
+   -------------------------------------------------------------------------- */
+.makers-section-divider {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba(247, 244, 237, 0.15);
+  padding: 1.25rem 0;
+  margin-bottom: 3.5rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #8c887f;
+}
+
+.makers-editorial-roster {
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+  margin-bottom: 6rem;
+}
+
+/* ── 01. MUHUNTHA (The Monumental Anchor) ── */
+.maker-block-muhuntha {
+  background: #121115;
+  border: 1px solid rgba(247, 244, 237, 0.12);
+  border-radius: 16px;
+  padding: 3.5rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.maker-block-muhuntha:hover {
+  border-color: rgba(255, 69, 26, 0.35);
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.5);
+}
+
+.maker-muhuntha-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  border-bottom: 1px solid rgba(247, 244, 237, 0.08);
+  padding-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.maker-muhuntha-name-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.maker-index-label {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  color: #ff451a;
+  font-weight: 700;
+}
+
+.maker-display-name-hero {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 900;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  color: #f7f4ed;
+  margin: 0;
+}
+
+.maker-muhuntha-role-box {
+  max-width: 420px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #a8a49c;
+  background: rgba(247, 244, 237, 0.03);
+  border: 1px solid rgba(247, 244, 237, 0.06);
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+}
+
+.maker-muhuntha-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem 2.5rem;
+}
+
+.maker-contribution-row-kinetic {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid rgba(247, 244, 237, 0.06);
+  transition: all 0.25s ease;
+}
+
+.maker-contribution-row-kinetic:hover {
+  border-bottom-color: #ff451a;
+  padding-left: 0.5rem;
+}
+
+.maker-kinetic-num {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.75rem;
+  color: #ff451a;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.maker-kinetic-text {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #dedad2;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
+}
+
+.maker-contribution-row-kinetic:hover .maker-kinetic-text {
+  color: #ffffff;
+}
+
+/* ── Asymmetric Dual Column Container ── */
+.makers-dual-asymmetric {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2.5rem;
+}
+
+.makers-dual-asymmetric-inverted {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 2.5rem;
+}
+
+/* ── 02. MUKESH (Architectural Data Grid) ── */
+.maker-block-mukesh {
+  background: #111014;
+  border: 1px solid rgba(247, 244, 237, 0.1);
+  border-radius: 16px;
+  padding: 2.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+.maker-block-mukesh:hover {
+  border-color: rgba(255, 69, 26, 0.3);
+}
+
+.maker-editorial-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.maker-display-name-mid {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #f7f4ed;
+  margin: 0;
+}
+
+.maker-editorial-category {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.725rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8c887f;
+}
+
+.maker-data-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.maker-data-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  background: rgba(247, 244, 237, 0.02);
+  border: 1px solid rgba(247, 244, 237, 0.06);
+  padding: 1rem 1.25rem;
+  border-radius: 8px;
+  font-size: 0.925rem;
+  color: #c9c5bc;
+  line-height: 1.4;
+  transition: all 0.2s ease;
+}
+
+.maker-data-item:hover {
+  background: rgba(255, 69, 26, 0.04);
+  border-color: rgba(255, 69, 26, 0.25);
+  color: #ffffff;
+}
+
+.maker-data-item-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.7rem;
+  color: #ff451a;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+
+/* ── 03. MOHITH (Industrial Hardware Daemon) ── */
+.maker-block-mohith {
+  background: #111014;
+  border: 1px solid rgba(247, 244, 237, 0.1);
+  border-radius: 16px;
+  padding: 2.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+.maker-block-mohith:hover {
+  border-color: rgba(255, 69, 26, 0.3);
+}
+
+.maker-terminal-box {
+  background: #09080b;
+  border: 1px solid rgba(247, 244, 237, 0.08);
+  border-radius: 8px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.maker-terminal-line {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.925rem;
+  color: #c9c5bc;
+  line-height: 1.4;
+}
+
+.maker-terminal-prompt {
+  color: #ff451a;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.85rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+/* ── 04. DEVANANTH (Creative Experience & Form) ── */
+.maker-block-devananth {
+  background: #111014;
+  border: 1px solid rgba(247, 244, 237, 0.1);
+  border-radius: 16px;
+  padding: 2.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+.maker-block-devananth:hover {
+  border-color: rgba(255, 69, 26, 0.3);
+}
+
+.maker-creative-pills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.maker-creative-pill-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: rgba(247, 244, 237, 0.03);
+  border: 1px solid rgba(247, 244, 237, 0.08);
+  padding: 1.15rem 1.35rem;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #dedad2;
+  transition: all 0.2s ease;
+}
+
+.maker-creative-pill-item:hover {
+  background: rgba(247, 244, 237, 0.06);
+  border-color: #ff451a;
+  color: #ffffff;
+  transform: translateX(4px);
+}
+
+.maker-creative-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #ff451a;
+  flex-shrink: 0;
+}
+
+/* ── 05. ALWYN (Integrated Data Flow & Print Agent) ── */
+.maker-block-alwyn {
+  background: #111014;
+  border: 1px solid rgba(247, 244, 237, 0.1);
+  border-radius: 16px;
+  padding: 2.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  transition: border-color 0.3s ease;
+}
+
+.maker-block-alwyn:hover {
+  border-color: rgba(255, 69, 26, 0.3);
+}
+
+.maker-blueprint-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.maker-blueprint-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 0.85rem 1rem;
+  background: rgba(247, 244, 237, 0.02);
+  border: 1px solid rgba(247, 244, 237, 0.05);
+  border-left: 2px solid #ff451a;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  color: #c9c5bc;
+  line-height: 1.4;
+  transition: all 0.2s ease;
+}
+
+.maker-blueprint-row:hover {
+  background: rgba(247, 244, 237, 0.05);
+  color: #ffffff;
+}
+
+/* --------------------------------------------------------------------------
+   Outro / Visual Signature Section
+   -------------------------------------------------------------------------- */
+.makers-editorial-outro {
+  border-top: 1px solid rgba(247, 244, 237, 0.15);
+  padding-top: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.makers-outro-heart-title {
+  font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: #f7f4ed;
+  margin: 0;
+}
+
+.makers-roster-roll {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-size: 0.875rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #a8a49c;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.makers-roster-slash {
+  color: #ff451a;
+  font-weight: 700;
+}
+
+.makers-outro-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.makers-btn-noir-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 2rem;
+  background-color: #ff451a;
+  color: #ffffff;
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  box-shadow: 0 4px 20px rgba(255, 69, 26, 0.35);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.makers-btn-noir-primary:hover {
+  background-color: #e03810;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(255, 69, 26, 0.5);
+}
+
+.makers-btn-noir-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.85rem;
+  background-color: transparent;
+  color: #f7f4ed;
+  border: 1px solid rgba(247, 244, 237, 0.2);
+  border-radius: 9999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.makers-btn-noir-secondary:hover {
+  background-color: rgba(247, 244, 237, 0.06);
+  border-color: #f7f4ed;
+  transform: translateY(-2px);
+}
+
+/* --------------------------------------------------------------------------
+   Mobile & Responsive Adjustments
+   -------------------------------------------------------------------------- */
+@media (max-width: 960px) {
+  .makers-dual-asymmetric,
+  .makers-dual-asymmetric-inverted {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .maker-muhuntha-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .maker-block-muhuntha {
+    padding: 2.5rem 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .makers-noir-page {
+    padding-top: calc(var(--mobile-navbar-clearance, 4.5rem) + 1rem);
+    padding-bottom: calc(var(--mobile-dock-clearance, 5.5rem) + 3rem);
+  }
+
+  .makers-noir-container {
+    padding: 0 1.25rem;
+  }
+
+  .makers-meta-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .makers-hero-title-massive {
+    font-size: 3.25rem;
+  }
+
+  .makers-dedication-vignette,
+  .makers-lunar-vignette {
+    padding: 1.75rem 1.25rem;
+    margin-bottom: 3.5rem;
+  }
+
+  .maker-block-muhuntha,
+  .maker-block-mukesh,
+  .maker-block-mohith,
+  .maker-block-devananth,
+  .maker-block-alwyn {
+    padding: 1.75rem 1.25rem;
+  }
+
+  .maker-display-name-hero {
+    font-size: 2.25rem;
+  }
+
+  .maker-display-name-mid {
+    font-size: 1.75rem;
+  }
+
+  .makers-outro-actions {
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+    position: relative;
+    z-index: 10;
+  }
+
+  .makers-btn-noir-primary,
+  .makers-btn-noir-secondary {
+    width: 100%;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    pointer-events: auto;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .makers-noir-page *,
+  .makers-btn-noir-primary,
+  .makers-btn-noir-secondary,
+  .maker-contribution-row-kinetic,
+  .maker-creative-pill-item {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+  }
+}

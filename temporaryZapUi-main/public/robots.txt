@@ -1,0 +1,26 @@
+User-agent: *
+Allow: /
+Allow: /srm-ktr-printing
+Allow: /pricing
+Allow: /how-it-works
+Allow: /faq
+Allow: /blog
+Allow: /blog/*
+Allow: /about
+Allow: /contact
+Allow: /makers
+Allow: /order
+
+# Disallow private and dynamic transactional routes
+Disallow: /admin
+Disallow: /admin/*
+Disallow: /checkout
+Disallow: /checkout/*
+Disallow: /order-success
+Disallow: /orders
+Disallow: /orders/*
+Disallow: /profile
+Disallow: /login
+
+# Canonical Sitemap Reference
+Sitemap: https://zapprints.store/sitemap.xml

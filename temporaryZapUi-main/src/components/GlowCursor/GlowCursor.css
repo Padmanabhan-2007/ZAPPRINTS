@@ -1,0 +1,15 @@
+.glow-cursor-canvas-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none; /* VERY IMPORTANT: DO NOT BLOCK CLICKS */
+  z-index: 9999; /* Safely above normal UI but shouldn't block */
+  overflow: hidden;
+}
+
+.glow-cursor-canvas-wrapper canvas {
+  width: 100%;
+  height: 100%;
+}
